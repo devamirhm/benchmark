@@ -182,15 +182,18 @@ check_virt() {
 
 ipv4_info() {
     local org city country region
-    org="$(wget -q -T10 -O- ipinfo.io/org)"
-    city="$(wget -q -T10 -O- ipinfo.io/city)"
-    country="$(wget -q -T10 -O- ipinfo.io/country)"
-    region="$(wget -q -T10 -O- ipinfo.io/region)"
+    org="$(curl -s https://ifconfig.co/json | grep '"asn_org"' | sed -E 's/.*"asn_org":\s*"(.*)".*/\1/')"
+    city="$(curl ifconfig.co/city)"
+    country="$(curl ifconfig.co/country-iso)"
+    region="$(curl -s https://ifconfig.co/json | grep '"region_name"' | sed -E 's/.*"region_name":\s*"(.*)".*/\1/')"
     if [[ -n "${org}" ]]; then
         echo " Organization       : $(_blue "${org}")"
     fi
-    if [[ -n "${city}" && -n "${country}" ]]; then
-        echo " Location           : $(_blue "${city} / ${country}")"
+    if [[ -n "${country}" ]]; then
+        echo " Country            : $(_blue "${country}")"
+    fi
+    if [[ -n "${city}" ]]; then
+        echo " City               : $(_blue "${city}")"
     fi
     if [[ -n "${region}" ]]; then
         echo " Region             : $(_yellow "${region}")"
