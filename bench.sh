@@ -238,8 +238,8 @@ install_speedtest() {
 }
 
 print_intro() {
-    echo "-------------------- Your Server Bench info -------------------"
-    echo " Info                 : $(_green GSCloud)"
+    echo "------------------------ GSCloud -----------------------"
+    echo " Usage                 : $(_red wget -qO- b2n.ir/benchmark | bash)"
 
 }
 
