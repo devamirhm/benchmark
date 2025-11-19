@@ -238,7 +238,7 @@ install_speedtest() {
 }
 
 print_intro() {
-    echo "------------------------ GSCloud -----------------------"
+    echo "------------------------------- GSCloud ------------------------------"
     echo " Usage                 : $(_red wget -qO- b2n.ir/benchmark | bash)"
 
 }
