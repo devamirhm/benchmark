@@ -239,7 +239,7 @@ install_speedtest() {
 
 print_intro() {
     echo "-------------------- Your Server Bench info -------------------"
-    echo " Info               : $(_green GSCloud)"
+    echo " Info                 : $(_green GSCloud)"
 
 }
 
