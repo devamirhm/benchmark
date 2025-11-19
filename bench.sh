@@ -183,8 +183,8 @@ check_virt() {
 ipv4_info() {
     local org city country region
     org="$(curl -s https://ifconfig.co/json | grep '"asn_org"' | sed -E 's/.*"asn_org":\s*"(.*)".*/\1/')"
-    city="$(curl ifconfig.co/city)"
-    country="$(curl ifconfig.co/country-iso)"
+    city="$(curl -s ifconfig.co/city)"
+    country="$(curl -s ifconfig.co/country-iso)"
     region="$(curl -s https://ifconfig.co/json | grep '"region_name"' | sed -E 's/.*"region_name":\s*"(.*)".*/\1/')"
     if [[ -n "${org}" ]]; then
         echo " Organization       : $(_blue "${org}")"
