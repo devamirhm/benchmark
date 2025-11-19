@@ -240,7 +240,7 @@ install_speedtest() {
 
 print_intro() {
     echo "-------------------- Your Server Bench info -------------------"
-    echo " Custom             : $(_green SoheilSTAR)"
+    echo " Info             : $(_green GSCloud)"
 
 }
 
