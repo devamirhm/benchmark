@@ -70,7 +70,7 @@ speed() {
     speed_test '69177' 'Dubai (du), AE'
     speed_test '5132' 'Shentel, US'
     speed_test '41534' 'OneProvider, FR'
-    speed_test '58821' 'NextWing, FI'
+    speed_test '48181' 'M247 Ltd, GB'
     speed_test '27457' 'Turktelecom, TR'
     speed_test '32298' 'SYNLINQ, DE'
     speed_test '35692' 'Clouvider, DE'
