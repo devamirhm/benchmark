@@ -413,8 +413,6 @@ next
 print_system_info
 ipv4_info
 next
-print_io_test
-next
 install_speedtest && speed && rm -fr speedtest-cli
 next
 print_end_time
